@@ -11,20 +11,36 @@
             int y1 = Convert.ToInt32(Console.ReadLine());
             int y2 = Convert.ToInt32(Console.ReadLine());
             double d1 = Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-            Console.WriteLine($"First coordinates is {x1},{y1} & Second coordinates is {x2},{y2}");
+            Console.WriteLine($"Provided co-ordinates (x1,y1):({x1},{y1})  &  (x2,y2):({x2},{y2})");
             return d1;
+        }
+        public static void EqualsMethod(double line1Distance, double line2Distance)
+        {
+            bool EqualsStatus = line1Distance.Equals(line2Distance);
+            if (EqualsStatus)
+            {
+                Console.WriteLine("Length value of both Line 1 and Line 2 are EQUAL");
+            }
+            else
+            {
+                Console.WriteLine("Length value of Line 1 and Line 2 are NOT equal");
+            }
         }
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Line computation Program");
             Console.WriteLine("Takinng You To First Coordinates of Line1");
             double Line1Distance = GeometryLineComputation.LineDistance();
-            Console.WriteLine("Found Line 1 Lentgh Value :{Line1Distance}");
+            Console.WriteLine("Found Line 1 Length Value :{Line1Distance}");
             Console.WriteLine("Taking you To Second Coordinates of Line2");
             double Line2Distance = GeometryLineComputation.LineDistance();
-            Console.WriteLine("Found Line 2 Lentgh Value :{Line2Distance}");
-            Console.WriteLine($"So Finally get Line 1 Lentgh Value :{Line1Distance} & Line 2 Lentgh Value :{Line2Distance}");
-              
+            Console.WriteLine("Found Line 2 Length Value :{Line2Distance}");
+            Console.WriteLine();
+            Console.WriteLine($"So Finally get Line 1 Length Value :{Line1Distance} & Line 2 Length Value :{Line2Distance}");
+
+            Console.Write("Using Equals Method output is :::: ");
+            GeometryLineComputation.EqualsMethod(Line1Distance, Line2Distance);
+
         }
     }
 }
