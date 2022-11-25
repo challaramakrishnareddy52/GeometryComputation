@@ -54,10 +54,8 @@
             Console.WriteLine("Found Line 2 Length Value :{Line2Distance}");
             Console.WriteLine();
             Console.WriteLine($"So Finally get Line 1 Length Value :{Line1Distance} & Line 2 Length Value :{Line2Distance}");
-
             Console.Write("Using Equals Method output is :::: ");
             GeometryLineComputation.EqualsMethod(Line1Distance, Line2Distance);
-
             Console.WriteLine("Using Compare Method output is ::::");
             GeometryLineComputation.CompareMethod(Line1Distance, Line2Distance);
 
